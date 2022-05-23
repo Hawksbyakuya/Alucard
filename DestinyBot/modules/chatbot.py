@@ -40,7 +40,7 @@ def kukirm(update: Update, context: CallbackContext) -> str:
 
         else:
             update.effective_message.edit_text(
-                "Alucard's AI disable by {}.".format(mention_html(user.id, user.first_name)),
+                "Rias's Chatbot has been disabled by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
     return ""
@@ -65,7 +65,7 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Alucard's AI enable by {}.".format(mention_html(user.id, user.first_name)),
+                "Rias's Chatbot enabled by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
     return ""
@@ -125,7 +125,7 @@ def chatbot(update: Update, context: CallbackContext):
 @run_async
 def list_all_chats(update: Update, context: CallbackContext):
     chats = sql.get_all_kuki_chats()
-    text = "<b>Alucard-AI Enabled Chats</b>\n"
+    text = "<b>Rias-AI Enabled Chats</b>\n"
     for chat in chats:
         try:
             x = context.bot.get_chat(int(*chat))
@@ -138,13 +138,13 @@ def list_all_chats(update: Update, context: CallbackContext):
     update.effective_message.reply_text(text, parse_mode="HTML")
 
 __help__ = """
-Chatbot utilizes the Kuki's api which allows Alucard to talk and provide a more interactive group chat experience.
+Chatbot utilizes the Kuki's api which allows Rias to talk and provide a more interactive group chat experience.
 *Admins only Commands*:
-  ✟ `/chatbot`*:* Shows chatbot control panel
-*Powered by* [HellSing Organisation](https://t.me/HellSingOrganisation)
+  `/chatbot`*:* Shows chatbot control panel
+*Powered by* [Anime ALFA](https://t.me/ANIME_ALFA_X)
 """
 
-__mod_name__ = "✟ Chatbot ✟"
+__mod_name__ = "AI"
 
 CHATBOTK_HANDLER = CommandHandler("chatbot", kuki)
 ADD_CHAT_HANDLER = CallbackQueryHandler(kukiadd, pattern=r"add_chat")
