@@ -163,17 +163,17 @@ query ($id: Int,$search: String) {
     }
 """
 
-AWAKE_MSG = f"""✟ Hello I'm Proceeding on my Mission as planned.
+AWAKE_MSG = f"""❤️ Hello I am a sexy Robot created with love by [Hawks](https://t.me/TheSharpEye)
 
-✟ Python Version : {py_ver()}
+Python Version : {py_ver()}
 
-✟ Library Version : {tg_ver}
+Library Version : {tg_ver}
 
-✟ Telethon Version : {teleth_ver}
+Telethon Version : {teleth_ver}
 
-✟ Pyrogram Version : {pyro_ver}
+Pyrogram Version : {pyro_ver}
 
-✟ Thanks for giving me Mission 🩸 and adding me here!
+Ara thanks for adding me here💓💓
 
 """
 
@@ -264,7 +264,7 @@ def anime(update: Update, context: CallbackContext):
                     parse_mode=ParseMode.MARKDOWN,
                     reply_markup=InlineKeyboardMarkup(buttons))
             except:
-                msg += f" [🩸]({image})"
+                msg += f" [💓]({image})"
                 update.effective_message.reply_text(
                     msg,
                     parse_mode=ParseMode.MARKDOWN,
@@ -362,7 +362,7 @@ def manga(update: Update, context: CallbackContext):
                     parse_mode=ParseMode.MARKDOWN,
                     reply_markup=InlineKeyboardMarkup(buttons))
             except:
-                msg += f" [🩸]({image})"
+                msg += f" [💓]({image})"
                 update.effective_message.reply_text(
                     msg,
                     parse_mode=ParseMode.MARKDOWN,
@@ -378,12 +378,12 @@ def awake(update: Update, context: CallbackContext):
     IMAGE = "https://telegra.ph/file/630e39b53d676ae91ad4f.jpg"
     msg = ""
     msg += f"{AWAKE_MSG}"
-    support = "t.me/HellSingOrganisation"
-    owner = "t.me/Freaking_tag"
+    support = "t.me/RiasGremorySupportGroup"
+    owner = "t.me/TheSharpeEye"
     buttons = [
 	[
-            InlineKeyboardButton("『HellSing🩸』", url=support),
-	    InlineKeyboardButton("『Freak🎭』", url=owner)
+            InlineKeyboardButton("『SUPPORT❤️』", url=support),
+	    InlineKeyboardButton("『OWNER💕』", url=owner)
         ]
     ]
     update.effective_message.reply_photo(
@@ -481,20 +481,20 @@ def request(update: Update, context: CallbackContext):
     #args = context.args
     #log_message = ""
     IMAGE = "https://telegra.ph/file/182dcf60ae56e644b09ed.jpg"
-    reqChannelLink = "t.me/+5ADY8ll9pcJhZmRl"
-    familyLink = "t.me/HellSingFamily"
+    reqChannelLink = "+d2wKfwTV2aFkMjA1"
+    familyLink = "t.me/AnimeAlfaDiscussion"
     chat = update.effective_chat
     ANIME_NAME = message.text.split(' ', 1)
     user = update.effective_user
     bot = context.bot
     buttons = [
-        [InlineKeyboardButton("⏳ Request Centre ⏳", url=reqChannelLink)],
-        [InlineKeyboardButton("✨ HellSing Family ✨", url=familyLink)]
+        [InlineKeyboardButton("⌛Request⏳", url=reqChannelLink)],
+        [InlineKeyboardButton("🔥Anime Alfa🔥 ", url=familyLink)]
     ]
     try:
         chat_id = REQUEST_CHAT_ID
     except TypeError:
-        update.effective_message.reply_text("Bruh, this will work like `/request <anime name>`, don't comedy me..")
+        update.effective_message.reply_text("Bruh, this will work like `/request <anime name>`, don't try to touch me in that manner...")
     to_send = " ".join(ANIME_NAME)
     #req_by = f"<b>Requested By:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
     to_send = to_send.replace("/","#")
@@ -503,7 +503,7 @@ def request(update: Update, context: CallbackContext):
 
     if len(to_send.split(" ")) >= 2:
         try:
-            msg = "Request have been Submitted successfully, please have some patience.\n If your request not processed yet, then check the buttons below:\n"
+            msg = "Ara Ara your request have been submitted succesfully.\n Ara check the buttons below if your request has not proceed yet\n"
             to_send = f"{to_send}\nRequester: @{user.username}\nRequester ID: {user.id}\n\nFrom Chat: {chat.title}\nChat Username: @{chat.username}\nChat ID: {chat.id}\n"
             update.effective_message.reply_photo(
 	        IMAGE,
@@ -640,25 +640,24 @@ def kayo(update: Update, context: CallbackContext):
 
 __help__ = """
  ──「 Anime search 」──                           
-✟ /anime <anime>: returns information about the anime.
-✟ /whatanime: returns source of anime when replied to photo or gif.                                                          
-✟ /character <character>: returns information about the character.
-✟ /manga <manga>: returns information about the manga.
-✟ /user <user>: returns information about a MyAnimeList user.
-✟ /upcoming: returns a list of new anime in the upcoming seasons.
-✟ /airing <anime>: returns anime airing info.
-✟ /whatanime <anime>: reply to gif or photo.
-✟ /kaizoku <anime>: search an anime on animekaizoku.com
-✟ /kayo <anime>: search an anime on animekayo.com
+/anime <anime>: returns information about the anime.
+/whatanime: returns source of anime when replied to photo or gif.                                                          
+/character <character>: returns information about the character.
+/manga <manga>: returns information about the manga.
+/user <user>: returns information about a MyAnimeList user.
+/upcoming: returns a list of new anime in the upcoming seasons.
+/airing <anime>: returns anime airing info.
+/whatanime <anime>: reply to gif or photo.
+/kaizoku <anime>: search an anime on animekaizoku.com
+/kayo <anime>: search an anime on animekayo.com
 
  「 Anime Quotes 」
-✟ /animequotes: for anime quotes randomly as photos.
-✟ /quote: send quotes randomly as text
+/animequotes: for anime quotes randomly as photos.
+/quote: send quotes randomly as text
 
 ──「 Anime search 」──
-✟ /request <query>: Triggers a request for the Hunter Committee.
-Your triggered request will be available in [HellSing Family](https://t.me/HellSingFamily) then the request is marked as completed. Make sure to join [HellSing Family](https://t.me/HellSingFamily) to access your request.
-
+/request <query>: Triggers a request for the Hunter Committee.
+Ara your request will be available in [Anime ALFA](https://t.me/ANIME_ALFA_X) then the request is marked as completed. Make sure to join [Anime Alfa Discussion](https://t.me/AnimeAlfaDiscussion) to access your request and to play with me.
  """
 
 REQUEST_HANDLER = DisableAbleCommandHandler("request", request, run_async=True)
