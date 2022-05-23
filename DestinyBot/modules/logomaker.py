@@ -44,7 +44,7 @@ def mediainfo(media):
 
 @register(pattern="^/logo ?(.*)")
 async def logo_gen(event):
-    xx = await event.reply("`Alucard is preparing your logo...`")
+    xx = await event.reply("`Rias is preparing your logo...`")
     name = event.pattern_match.group(1)
     if not name:
         await xx.edit("`Provide some text to draw!\nExample: /logo <your name>!`")
@@ -113,7 +113,7 @@ async def logo_gen(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Alucard](https://t.me/Alucard_Robot)",
+            caption="Logo by [Rias](https://t.me/RiasXbot)",
             force_document=False,
         )
         os.remove(flnme)
@@ -127,7 +127,7 @@ async def logo_gen(event):
 
 @register(pattern="^/wlogo ?(.*)")
 async def logo_(event):
-    xx = await event.reply("`Alucard is preparing your logo...`")
+    xx = await event.reply("`Rias is preparing your logo...`")
     name = event.pattern_match.group(1)
     if not name:
         await xx.edit("`Provide some text to draw!\nExample: /wlogo <your name>!`")
@@ -196,7 +196,7 @@ async def logo_(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Alucard](https://t.me/Alucard_Robot)",
+            caption="Logo by [Rias](https://t.me/RiasXbot)",
             force_document=False,
         )
         os.remove(flnme)
