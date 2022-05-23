@@ -200,11 +200,11 @@ That's what approvals are for - approve of trustworthy users to allow them to se
 
 *Admin commands:*
 
-✟ /approval*:* Check a user's approval status in this chat.
-✟ /approve*:* Approve of a user. Locks, blacklists, and antiflood won't apply to them anymore.
-✟ /unapprove*:* Unapprove of a user. They will now be subject to locks, blacklists, and antiflood again.
-✟ /approved*:* List all approved users.
-✟ /unapproveall*:* Unapprove *ALL* users in a chat. This cannot be undone.
+/approval*:* Check a user's approval status in this chat.
+/approve*:* Approve of a user. Locks, blacklists, and antiflood won't apply to them anymore.
+/unapprove*:* Unapprove of a user. They will now be subject to locks, blacklists, and antiflood again.
+/approved*:* List all approved users.
+/unapproveall*:* Unapprove *ALL* users in a chat. This cannot be undone.
 
 """
 
@@ -224,6 +224,6 @@ dispatcher.add_handler(APPROVAL)
 dispatcher.add_handler(UNAPPROVEALL)
 dispatcher.add_handler(UNAPPROVEALL_BTN)
 
-__mod_name__ = "✟ Approve ✟"
+__mod_name__ = "Approve"
 __command_list__ = ["approve", "unapprove", "approved", "approval"]
 __handlers__ = [APPROVE, DISAPPROVE, APPROVED, APPROVAL]
