@@ -1,4 +1,4 @@
-__mod_name__ ="✟ Meme ✟"
+__mod_name__ ="Meme"
 
 __help__ ="""
 
@@ -8,6 +8,6 @@ Note:
 
 • This module utilizes meme-api.heroku.com, which uses reddit as a source.
 
- ✟ /meme: To get random wholesome memes from subreddit r/wholesomememes.
+ /meme: To get random wholesome memes from subreddit r/wholesomememes.
  
  """
