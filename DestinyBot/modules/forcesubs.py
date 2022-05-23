@@ -105,13 +105,13 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "🩸 **Alucard is not admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
+                        "**Ara Rias is not admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
                     )
 
             except ChatAdminRequired:
                 client.send_message(
                     chat_id,
-                    text=f"🦇 **I not an admin of @{channel} channel.**\n__Give me admin of that channel and retry.\n#Ending FSub...__",
+                    text=f"**Ara Rias is not an admin of @{channel} channel.**\n__Give me admin of that channel and retry.\n#Ending FSub...__",
                 )
 
 
@@ -140,7 +140,7 @@ def config(client, message):
                     sent_message.edit("✅ **Unmuted all members who are muted by me.**")
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "🦇 **I am not an admin in this chat.**\n__I can't unmute members because i am not an admin in this chat make me admin with ban user permission.__"
+                        "**Ara Ara I'm not an admin in this chat.**\n__I can't unmute members because i am not an admin in this chat make me admin with ban user permission.__"
                     )
             else:
                 try:
@@ -152,7 +152,7 @@ def config(client, message):
                     )
                 except UserNotParticipant:
                     message.reply_text(
-                        f"🦇 **Not an Admin in the Channel**\n__I am not an admin in the [channel](https://t.me/{input_str}). Add me as a admin in order to enable ForceSubscribe.__",
+                        f"**Not an Admin in the Channel**\n__I am not an admin in the [channel](https://t.me/{input_str}). Add me as a admin in order to enable ForceSubscribe.__",
                         disable_web_page_preview=True,
                     )
                 except (UsernameNotOccupied, PeerIdInvalid):
@@ -175,7 +175,7 @@ def config(client, message):
 
 __help__ = """
 *Force Subscribe:*
-➣ Alucard can mute members who are not subscribed your channel until they subscribe
+➣ Heya Rias can mute members who are not subscribed your channel until they subscribe
 ➣ When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
 **Setup**
 *Only creator*
@@ -183,12 +183,12 @@ __help__ = """
 ➣ Add me in your channel as admin 
  
 *Commmands*
-✟ /fsub {channel username} - To turn on and setup the channel.
-  🩸Do this first...
-✟ /fsub - To get the current settings.
-✟ /fsub disable - To turn of ForceSubscribe..
-  🩸If you disable fsub, you need to set again for working.. /fsub {channel username} 
-✟ /fsub clear - To unmute all members who muted by me.
+/fsub {channel username} - To turn on and setup the channel.
+  💕Do this first...
+/fsub - To get the current settings.
+/fsub disable - To turn of ForceSubscribe..
+ 💕 If you disable fsub, you need to set again for working.. /fsub {channel username} 
+/fsub clear - To unmute all members who muted by me.
 *Federation*
 Everything is fun, until a spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
 But then you have many groups, and you don't want this spammer to be in one of your groups - how can you deal? Do you have to manually block it, in all your groups?\n
@@ -196,8 +196,8 @@ But then you have many groups, and you don't want this spammer to be in one of y
 You can even designate federation admins, so your trusted admin can ban all the spammers from chats you want to protect.\n
 *Commands:*\n
 Feds are now divided into 3 sections for your ease.
-✟ `/fedownerhelp`*:* Provides help for fed creation and owner only commands
-✟ `/fedadminhelp`*:* Provides help for fed administration commands
-✟ `/feduserhelp`*:* Provides help for commands anyone can use
+`/fedownerhelp`*:* Provides help for fed creation and owner only commands
+`/fedadminhelp`*:* Provides help for fed administration commands
+`/feduserhelp`*:* Provides help for commands anyone can use
 """
-__mod_name__ = "✟ Fsub/Fed ✟"
+__mod_name__ = "Fsub/Fed"
