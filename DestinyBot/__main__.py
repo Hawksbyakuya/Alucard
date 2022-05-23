@@ -86,26 +86,26 @@ first_name_pm = ""
 PM_START_TEXT = """
 ───『 {} 』───
 *Hey there {}!,*
-* I am an advance group management bot with a lots of Features. My Anime theme is from HellSing. Alucard *
+* I am a sexy group managing bot from the anime High School DxD. *
 
 ══════════════════════
-✟    *Mission Time:* `{}`    ✟
+❤️ *Play time:* `{}`    
 ══════════════════════
 
-➣ Users Interacted : `{}`
-➣ Total Chats : `{}`
+❤️ Users Interacted : `{}`
+❤️ Total Chats : `{}`
 
-✟ Try The Help Button below To Know My Abilities[.](https://telegra.ph/file/c7038dc606fe4ba9f01e1.jpg) ✟
+Ara Ara try the help button below to know my skills.[.](https://telegra.ph/file/c7038dc606fe4ba9f01e1.jpg)
 """
 
 
 HELP_STRINGS = """
-Hello there, I'm Alucard! I'm from the anime HellSing.
-To make me functional, make sure that I have enough rights in your group[.](https://telegra.ph/file/92e9311faf3522fb74d3e.jpg)
+Ara Ara try checking the buttons from below to get to know my skills.
+Give me enough rights in your chat to me functional[.](https://telegra.ph/file/92e9311faf3522fb74d3e.jpg)
 Helpful commands:
 
 - /start: It will starts me! You've probably used this, as you are here now.
-- /donate: To show pity to my Dev... Shhhh! Just don't tell him I said this.
+- /donate: To smash money on my dev's face, shhh don't tell him that I said that.
 
 All commands can be used with the following: / !
 List of all the Modules:
@@ -113,27 +113,26 @@ List of all the Modules:
     dispatcher.bot.first_name, "" if not ALLOW_EXCL else "✟ All commands can either be used with / or !.")
 buttons = [
     [
-        InlineKeyboardButton(text="Start Mission➕",url="https://telegram.dog/Alucard_Robot?startgroup=true"),
+        InlineKeyboardButton(text="Add me➕",url="https://telegram.dog/RiasXbot?startgroup=true"),
         InlineKeyboardButton(text="Help⁉️", callback_data="help_back")
     ],
     [
-        InlineKeyboardButton(text="Wizards🔥",url="https://t.me/TeamWizardz"),
-        InlineKeyboardButton(text="Hunters🐉", url="https://t.me/HunterCommittee")
+        InlineKeyboardButton(text="🔥Anime ALFA🔥",url="https://t.me/ANIME_ALFA_X"),
+        InlineKeyboardButton(text="Chat💭", url="https://t.me/AnimeAlfaDiscussion")
     ],
     [
-        InlineKeyboardButton(text="HellSing🩸",url="https://t.me/HellSingOrganisation"),
-        InlineKeyboardButton(text="Family🀄",url="https://t.me/HellSingFamily")
+        InlineKeyboardButton(text="Support🚨",url="https://t.me/RiasGremorySupportGroup"),
+        InlineKeyboardButton(text="Logs📊",url="https://t.me/RiasGremoryLogs")
     ]
 ]
 
 GROUP_START_IMG = "https://telegra.ph/file/8b06d2fb52b5895384c57.mp4"
 DESTINY_IMG = "https://telegra.ph/file/8b06d2fb52b5895384c57.mp4"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting [Freak🎭](t.me/Freaking_tag)
+DONATE_STRING = """Ara Ara so you wanna donate?
+ You can support the project by joining [Anime ALFA](t.me/Anime_Alfa_X)
  Supporting isn't always financial!
- Those who cannot provide monetary support are welcome to help us develop the bot at our
-[Organisation](t.me/HellSingOrganisation)."""
+ Those who wanna help the project by donating just join [Anime ALFA Chat](https://t.me/AnimeAlfaDiscussion)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -197,7 +196,7 @@ def send_help(chat_id, text, keyboard=None):
 def test(update: Update, context: CallbackContext):
     # pprint(eval(str(update)))
     # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
-    update.effective_message.reply_text("Hello Human! I'm Up and continuing my mission perfectly fine.")
+    update.effective_message.reply_text("Ara Ara I'm working fine don't worry much..")
     print(update.effective_message)
 
 
@@ -249,7 +248,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "🩸 Hi {}\nI won[']({})t sleep yet, because I believe someone is left for me to eliminate.\n\n Mission Time - {}".format(update.effective_user.first_name,GROUP_START_IMG,get_readable_time((time.time() - StartTime))),
+            "💕Ara {}\nI won[']({})t sleep yet, because my darling wants me to play with him.\n\n Play Time- {}".format(update.effective_user.first_name,GROUP_START_IMG,get_readable_time((time.time() - StartTime))),
             parse_mode=ParseMode.MARKDOWN
        )
 
@@ -379,7 +378,7 @@ def unmei_about_callback(update, context):
     query = update.callback_query
     if query.data == "unmei_":
         query.message.edit_text(
-            text="๏ I'm *Alucard (Hellsing)*, a powerful group management bot built to help you manage your group easily."
+            text="๏ Ara *I'm Rias, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
@@ -401,7 +400,7 @@ def unmei_about_callback(update, context):
                     InlineKeyboardButton(text="Owner", callback_data="unmei_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://youtu.be/dQw4w9WgXcQ"),
+                    InlineKeyboardButton(text="Anime ALFA Chat", url="https://t.me/AnimeAlfaDiscussion),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="unmei_back"),
@@ -428,7 +427,7 @@ def unmei_about_callback(update, context):
     elif query.data == "unmei_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Alucard (HellSing) is now ready to manage your group."
+            "\nCongragulations, Rias is now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -455,14 +454,14 @@ def unmei_about_callback(update, context):
         )
     elif query.data == "unmei_support":
         query.message.edit_text(
-            text="**๏ Alucard Support Chats**"
+            text="**๏ Rias Support Chats**"
             "\nJoin My Support Group/Channel for see or report a problem on Unmei.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/HellSingOrganisation"),
-                    InlineKeyboardButton(text="Logs", url="https://t.me/HellSingQuaters"),
+                    InlineKeyboardButton(text="Support", url="https://t.me/RiasGremorySupportGroup"),
+                    InlineKeyboardButton(text="Logs", url="https://t.me/RiasGremoryLogs"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="unmei_"),
@@ -475,17 +474,17 @@ def unmei_about_callback(update, context):
 
     elif query.data == "unmei_credit":
         query.message.edit_text(
-            text=f"๏ Owner and Committee\n"
-            "\nHere is the Owner of Alucard and the Committee he owns",
+            text=f"๏ Support and Devs\n"
+            "\nHere is the Support links and list of devs who created this sexy chick.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
 		 [
-                    InlineKeyboardButton(text="Freak🎭", url="https://t.me/Freaking_tag"),
+                    InlineKeyboardButton(text="Owner", url="t.me/TheSharpEye"),
                  ],
                  [
-                    InlineKeyboardButton(text="Hunter Association", url="https://t.me/TheHunterAssociation"),
-                    InlineKeyboardButton(text="Committee", url="https://t.me/HunterCommittee"),
+                    InlineKeyboardButton(text="Freak", url="t.me/LIVINGFREAK"),
+                    InlineKeyboardButton(text="Support", url="t.me/RiasGremorySupportGroup"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="unmei_"),
@@ -759,8 +758,8 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 866830519:
             update.effective_message.reply_text(
-                "I'm here for the HellSing Organisation 🩸 I will help you also, just join"
-                "[HellSing Organisation]({})".format(DONATION_LINK),
+                "I'm here for my darling [Hawk](t.me/TheSharpEye) but I'll help you too just join"
+                "[Anime ALFA Chat]({})".format(DONATION_LINK),
                 parse_mode=ParseMode.MARKDOWN,
             )
     else:
@@ -806,7 +805,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "Trump Card of HellSing Organisation, [Alucard](https://telegra.ph/file/aeb0c972d16b9741735a5.mp4) is awake again.",
+                "Ara Ara don't push it so hard inside, I'm already Awake[.](https://telegra.ph/file/ba4afed03dca812c42b4a.jpg)",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
