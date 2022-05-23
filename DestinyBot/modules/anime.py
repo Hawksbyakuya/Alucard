@@ -375,7 +375,7 @@ def manga(update: Update, context: CallbackContext):
 
 def awake(update: Update, context: CallbackContext):
     message = update.effective_message
-    IMAGE = "https://telegra.ph/file/630e39b53d676ae91ad4f.jpg"
+    IMAGE = "https://telegra.ph/file/2ba1d5908fe4618e510f1.jpg"
     msg = ""
     msg += f"{AWAKE_MSG}"
     support = "t.me/RiasGremorySupportGroup"
@@ -480,7 +480,7 @@ def request(update: Update, context: CallbackContext):
     message = update.effective_message
     #args = context.args
     #log_message = ""
-    IMAGE = "https://telegra.ph/file/182dcf60ae56e644b09ed.jpg"
+    IMAGE = "https://telegra.ph/file/2cde8a1cd2fd59d02c80e.jpg"
     reqChannelLink = "+d2wKfwTV2aFkMjA1"
     familyLink = "t.me/AnimeAlfaDiscussion"
     chat = update.effective_chat
