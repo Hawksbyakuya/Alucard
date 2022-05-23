@@ -24,30 +24,30 @@ async def carbon_func(_, message):
     carbon.close()
 
 
-MEMEK = "https://telegra.ph/file/b4e4db5cb7ce118caf3bb.jpg"
+MEMEK = "https://telegra.ph/file/8e4e0294c6e9bbbaaa144.jpg"
 
 #@support_plus
 @pbot.on_message(filters.command("repo"))
 async def repo(_, message):
     await message.reply_photo(
         photo=MEMEK,
-        caption=f"""🩸 **I'm at service, I'm Alucard** 
+        caption=f"""💕 **I'm at your laps darling** 
 
-**Owner : [Freak🎭](https://t.me/freaking_tag)**
+**Owner : [Hawks](https://t.me/TheShapEye)**
 **Python Version :** `{y()}`
 **Library Version :** `{o}`
 **Telethon Version :** `{s}`
 **Pyrogram Version :** `{z}`
 
-**Wanna create your own Bot? Check my repo below.**
+**My repo is not mentioned below but I'm created using the repo of Emiko repo.**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Repo", url="https://youtu.be/dQw4w9WgXcQ"), 
+                        "Repo", url="https://t.me/Anime_Alfa_X"), 
                     InlineKeyboardButton(
-                        "Support", url="https://t.me/HellSingOrganisation")
+                        "Support", url="https://t.me/RiasGremorySupportGroup")
                 ]
             ]
         )
