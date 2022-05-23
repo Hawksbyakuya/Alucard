@@ -91,23 +91,23 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("Yeah! Like you can ban my Master. LMAO. He is the head of the HellSing Organisation, don't mess with him or consequences.")
+            message.reply_text("Ara don't try to ban Hades. don't mess with him or consequences.")
         elif user_id in DEV_USERS:
-            message.reply_text("That's one of the Knights from the Organisation, I can't act against the members...")
+            message.reply_text("The User is from TEAM DxD, I can't act against the Devs...")
         elif user_id in DRAGONS:
             message.reply_text(
-                "Protestines can't be banned. Make a Note for it."
+                "Dragons can't be banned. Make a Note for it."
             )
         elif user_id in DEMONS:
             message.reply_text(
-                "Hmmm! If I ban a Iscariot, then who will protect the people.."
+                "Hmmm! If I ban a Devil, then who will protect the people.."
             )
         elif user_id in TIGERS:
             message.reply_text(
-                "You know that's a Catholic, one of the Member from Hellsing Organisation ."
+                "You know that user is an Angel, one of my disasters."
             )
         elif user_id in WOLVES:
-            message.reply_text("Butlers are Immune!")
+            message.reply_text("Vampires are Immune!")
         else:
             message.reply_text("⚠️ Cannot banned admin.")
         return log_message
@@ -574,33 +574,33 @@ def snipe(update: Update, context: CallbackContext):
 __help__ = """
 *User Commands:*
 
-✟ /kickme*:* kicks the user who issued the command
+/kickme*:* kicks the user who issued the command
 
 *Admins only:*
 
-✟ /ban <userhandle>*:* bans a user. (via handle, or reply)
-✟ /sban <userhandle>*:* Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
-✟ /tban <userhandle> x(m/h/d)*:* bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
-✟ /unban <userhandle>*:* unbans a user. (via handle, or reply)
-✟ /kick <userhandle>*:* kicks a user out of the group, (via handle, or reply)
-✟ /mute <userhandle>*:* silences a user. Can also be used as a reply, muting the replied to user.
-✟ /tmute <userhandle> x(m/h/d)*:* mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
-✟ /unmute <userhandle>*:* unmutes a user. Can also be used as a reply, muting the replied to user.
-✟ /zombies*:* searches deleted accounts
-✟ /zombies clean*:* removes deleted accounts from the group.
-✟ /snipe <chatid> <string>*:* Make me send a message to a specific chat.
+/ban <userhandle>*:* bans a user. (via handle, or reply)
+/sban <userhandle>*:* Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
+/tban <userhandle> x(m/h/d)*:* bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
+/unban <userhandle>*:* unbans a user. (via handle, or reply)
+/kick <userhandle>*:* kicks a user out of the group, (via handle, or reply)
+/mute <userhandle>*:* silences a user. Can also be used as a reply, muting the replied to user.
+/tmute <userhandle> x(m/h/d)*:* mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
+/unmute <userhandle>*:* unmutes a user. Can also be used as a reply, muting the replied to user.
+/zombies*:* searches deleted accounts
+/zombies clean*:* removes deleted accounts from the group.
+/snipe <chatid> <string>*:* Make me send a message to a specific chat.
 
 *Remote commands:*
-✟ `/rban user group`*:* Remote ban
-✟ `/runban user group`*:* Remote un-ban
-✟ `/rpunch user group`*:* Remote punch
-✟ `/rmute user group`*:* Remote mute
-✟ `/runmute user group`*:* Remote un-mute
+`/rban user group`*:* Remote ban
+`/runban user group`*:* Remote un-ban
+`/rpunch user group`*:* Remote punch
+`/rmute user group`*:* Remote mute
+`/runmute user group`*:* Remote un-mute
 
 """
 
 
-__mod_name__ = "✟ Bans/Mutes ✟"
+__mod_name__ = "Ban/Mutes"
 
 BAN_HANDLER = CommandHandler(["ban", "sban"], ban, run_async=True)
 TEMPBAN_HANDLER = CommandHandler(["tban"], temp_ban, run_async=True)
