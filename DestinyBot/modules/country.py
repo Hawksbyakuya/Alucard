@@ -101,7 +101,7 @@ Time Zones:- {tom}
 Top Level Domain:- {lanester}
 wikipedia:- {wiki}</b>
 
-<b><i>Gathered By Alucard.</i></b>
+<b><i>Gathered By Rias.</i></b>
 """
 
     await borg.send_message(
