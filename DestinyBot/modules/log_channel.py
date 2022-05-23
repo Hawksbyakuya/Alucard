@@ -191,9 +191,9 @@ if is_module_loaded(FILENAME):
     __help__ = """
 ──「 Log channel 」──
 
-✟ /logchannel*:* get log channel info
-✟ /setlog*:* set the log channel.
-✟ /unsetlog*:* unset the log channel.
+/logchannel*:* get log channel info
+/setlog*:* set the log channel.
+/unsetlog*:* unset the log channel.
 
 *Setting the log channel is done by*:
 
@@ -202,7 +202,7 @@ if is_module_loaded(FILENAME):
 ➠ forwarding the /setlog to the group
 """
 
-    __mod_name__ = "✟ Logs ✟​"
+    __mod_name__ = "Logs​"
 
     LOG_HANDLER = CommandHandler("logchannel", logging, run_async=True)
     SET_LOG_HANDLER = CommandHandler("setlog", setlog, run_async=True)
