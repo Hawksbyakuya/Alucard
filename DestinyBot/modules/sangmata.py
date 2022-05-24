@@ -9,7 +9,7 @@ from asyncio.exceptions import TimeoutError
 @register(pattern="^/check_name ?(.*)")
 async def lastname(steal):
     steal.pattern_match.group(1)
-    puki = await steal.reply("```Retrieving User's information from HellSing Organisation....```")
+    puki = await steal.reply("```Retrieving User's information from ALFA Database...```")
     if steal.fwd_from:
         return
     if not steal.reply_to_msg_id:
@@ -31,7 +31,7 @@ async def lastname(steal):
                 response = await conv.get_response()
             except YouBlockedUserError:
                 await steal.reply(
-                    "```Error, report to @HellSing_Organisation```"
+                    "```Error, report to @RiasGremorySupportGroup```"
                 )
                 return
             if r.text.startswith("Name"):
@@ -56,4 +56,4 @@ async def lastname(steal):
                 conv.chat_id, [msg.id, r.id, response.id, respond.id]
             )
     except TimeoutError:
-        return await puki.edit("`You made me sick, Damnnnn youuuuuu.`")
+        return await puki.edit("`You choked me, damn.`")
