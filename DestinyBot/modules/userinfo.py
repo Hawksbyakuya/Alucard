@@ -122,7 +122,7 @@ def hpmanager(user):
 
 def make_bar(per):
     done = min(round(per / 10), 10)
-    return "◙" * done + "◘" * (10 - done)
+    return "🖤" * done + "🤍" * (10 - done)
 
 
 
@@ -246,24 +246,24 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Accessing data from HellSing Organisation...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>Gathering info from ALFA Database...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"╒═══<b>「Database of {html.escape(user.first_name)}:」</b>\n"
-        f"✟ ID: <code>{user.id}</code>\n"
-        f"✟ First Name: {html.escape(user.first_name)}"
+        f"╒═══<b>「Info of {html.escape(user.first_name)}:」</b>\n"
+        f"❤️ID: <code>{user.id}</code>\n"
+        f"❤️First Name: {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n✟ Last Name: {html.escape(user.last_name)}"
+        text += f"\n❤️Last Name: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n✟ Username: @{html.escape(user.username)}"
+        text += f"\n❤️Username: @{html.escape(user.username)}"
 
-    text += f"\n✟ Permanent Link: {mention_html(user.id,'link')}"
+    text += f"\n❤️Permanent Link: {mention_html(user.id,'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n✟ Presence: <code>{}</code>"
+        _stext = "\n❤️Presence: <code>{}</code>"
 
         afk_st = is_afk(user.id)
         if afk_st:
@@ -285,8 +285,8 @@ def info(update: Update, context: CallbackContext):
         spamwtc = sw.get_ban(int(user.id))
         if spamwtc:
             text += "\n\n<b>This person is Spamwatched!</b>"
-            text += f"\n✟ Reason: <pre>{spamwtc.reason}</pre>"
-            text += "\n✟ Appeal at @SpamWatchSupport"
+            text += f"\n❤️ Reason: <pre>{spamwtc.reason}</pre>"
+            text += "\n❤️ Appeal at @SpamWatchSupport"
         else:
             pass
     except:
@@ -314,7 +314,7 @@ def info(update: Update, context: CallbackContext):
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/HellSingUpdates/4"> ✟ </a>]'.format(
+        text += ' [<a href="https://t.me/RiasGremorySupportGroup/22"> ✟ </a>]'.format(
             bot.username,
         )
 
@@ -351,9 +351,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/HellSingUpdates/5"),
+                                "Health", url="https://t.me/RiasGremorySupportGroup/24"),
                             InlineKeyboardButton(
-                                "Members", url="https://t.me/HellSingUpdates/4")
+                                "Disasters", url="https://t.me/RiasGremorySupportGroup/22")
                         ],
                     ]
                 ),
@@ -439,7 +439,7 @@ def set_about_me(update: Update, context: CallbackContext):
 @sudo_plus
 def stats(update, context):
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
-    status = "*╒═══『 HellSing Statistics 』*\n\n"
+    status = "*╒═══『 Rias's STATS 』*\n\n"
     status += "*➠ Python Version:* " + python_version() + "\n"
     status += "*➠ python-Telegram-Bot:* " + str(ptbversion) + "\n"
     status += "*➠ Uptime:* " + get_readable_time((time.time()-StartTime)) + "\n"
@@ -448,8 +448,8 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✟ Support](https://t.me/{SUPPORT_CHAT}) | [✟ Updates](https://t.me/HellSingUpdates)\n\n"
-            + "╘══ 『 by [HellSing ✟ Organisation](https://t.me/HellSingOrganisation) 』\n",
+            + f"\n\n[❤️ Support](https://t.me/{SUPPORT_CHAT}) | [❤️ Logs](https://t.me/RiasGremoryLogs)\n\n"
+            + "╘══ 『 by [Rias](https://t.me/RiasXBot) 』\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
         )
@@ -461,9 +461,9 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✟ [Support](https://t.me/HellSingOrganisation) | ✟ [Updates](https://t.me/HellSingUpdates)\n\n"
+                    + f"\n\n❤️[Support](https://t.me/RiasGremorySupportGroup) | ❤️[Logs](https://t.me/RiasGremoryLogs)\n\n"
                 )
-                + "╘══『 by [HellSing ✟ Organisation](https://t.me/{SUPPORT_GROUP}) 』\n"
+                + "╘══『 by [RIAS SUPPORT](https://t.me/{SUPPORT_GROUP}) 』\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -523,7 +523,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust the HellSing Members to set my bio.",
+                "Erm... yeah, I only trust my DEVs to set my bio.",
             )
             return      
 
@@ -564,27 +564,27 @@ __help__ = """
 *AFK:*
 When marked as AFK, any mentions will be replied to with a message to say you're not available!
 This also sends your last seen based on when you ran afk!
- ✟ `/afk`*:* <reason>: mark yourself as AFK (away from keyboard).
- ✟ `brb` <reason>: same as the afk command - but not a command.
+ `/afk`*:* <reason>: mark yourself as AFK (away from keyboard).
+ `brb` <reason>: same as the afk command - but not a command.
 *ID:*
- ✟ `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
- ✟ `/gifid`*:* reply to a gif to me to tell you its file ID.
+ `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
+ `/gifid`*:* reply to a gif to me to tell you its file ID.
 *Self addded information:*
- ✟ `/setme <text>`*:* will set your info
- ✟ `/me`*:* will get your or another user's info.
+ `/setme <text>`*:* will set your info
+ `/me`*:* will get your or another user's info.
 Examples:
  `/setme I am a garrison.`
  `/me @username(defaults to yours if no user specified)`
 *Information others add on you:*
- ✟ `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
- ✟ `/setbio <text>`*:* while replying, will save another user's bio
+ `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
+ `/setbio <text>`*:* while replying, will save another user's bio
 Examples:
  `/bio @username(defaults to yours if not specified).`
  `/setbio This user is a wolf` (reply to the user)
 *Overall Information about you:*
- ✟ `/info`*:* get information about a user.
+ `/info`*:* get information about a user.
 *What is that health thingy?*
- Come and see [HP System](https://t.me/HellSingUpdates/5)
+ Come and see [HP System](https://t.me/RiasGremorySupportGroup/24)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
@@ -607,7 +607,7 @@ dispatcher.add_handler(GET_BIO_HANDLER)
 dispatcher.add_handler(SET_ABOUT_HANDLER)
 dispatcher.add_handler(GET_ABOUT_HANDLER)
 
-__mod_name__ = "✟ Info/AFK ✟"
+__mod_name__ = "Info/AFK"
 __command_list__ = ["setbio", "bio", "setme", "me", "info"]
 __handlers__ = [
     ID_HANDLER,
