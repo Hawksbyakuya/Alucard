@@ -25,6 +25,8 @@ Can be found on telegram as [Rias](https://t.me/RiasXbot).
 <a href="https://t.me/RiasGremoryLogs"> <img src="https://img.shields.io/badge/Update-Channel-blue?&logo=telegram" alt="Updates" /> </a><br>
 </p>
 
+<h4><p align="centre"> RIAS </p></h4>
+
 ![RIAS](https://telegra.ph/file/b7bd8341a416dcb479d01.jpg)
 
 ## Credits -
