@@ -92,7 +92,7 @@ def reverse(update: Update, context:CallbackContext):
         fetchUrl = response.headers['Location']
 
         if response != 400:
-            xx = bot.send_message(chat_id, "Searching for results in HellSing Organisation...."
+            xx = bot.send_message(chat_id, "Searching for results in ALFA Database.."
                                   "\nParsing it, please wait.", reply_to_message_id=rtmid)
         else:
             xx = bot.send_message(chat_id, "Google told me to fuck off.", reply_to_message_id=rtmid)
@@ -107,15 +107,15 @@ def reverse(update: Update, context:CallbackContext):
             imgspage = match['similar_images']
 
         if guess and imgspage:
-            xx.edit_text(f"[{guess}]({fetchUrl})\nSearching images in HellSing Organisation...", parse_mode='Markdown', disable_web_page_preview=True)
+            xx.edit_text(f"[{guess}]({fetchUrl})\nSearching images in ALFA Database..", parse_mode='Markdown', disable_web_page_preview=True)
         else:
-            xx.edit_text("Didn't find a shit in Organisation.")
+            xx.edit_text("Didn't find a shit in ALFA.")
             return
 
         images = scam(imgspage, lim)
         if len(images) == 0:
             xx.edit_text(f"[{guess}]({fetchUrl})\n[Visually similar images]({imgspage})"
-                          "\nDidn't find a shit in Organisation.", parse_mode='Markdown', disable_web_page_preview=True)
+                          "\nDidn't find a shit in ALFA.", parse_mode='Markdown', disable_web_page_preview=True)
             return
 
         imglinks = []
@@ -184,7 +184,7 @@ __help__ = """
    /reverse or /grs or /pp :- reply to a sticker, or an image to search it!
 Do you know that you can search an image with a link too? /reverse picturelink <amount>.
 """
-__mod_name__ = "✟ Reverse ✟"
+__mod_name__ = "Reverse"
 
 REVERSE_HANDLER = DisableAbleCommandHandler(
     ["reverse", "pp", "grs"], reverse, pass_args=True, admin_ok=True
