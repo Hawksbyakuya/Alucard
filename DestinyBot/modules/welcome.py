@@ -198,19 +198,19 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    f"Welcome My Master Freak {html.escape(chat.title)}. My Beloved, Master!!!.", reply_to_message_id=reply
+                    f"Welcome My Darling Hades to {html.escape(chat.title)}. My Beloved, darling!!!.", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
                     f"#USER_JOINED\n"
-                    f"Master just joined the chat"
+                    f"Hades just joined the chat"
                 )
                 continue
 
             # Welcome Devs
             if new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "A Knight from the HellSing Organisation has joined the group! Be careful!",
+                    "A member of TEAM DxD just joined! Hide your bananas!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -218,7 +218,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome Sudos
             if new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                    "Attention! a Protestine just joined the group!",
+                    "Attention! a Dragon just joined the group!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -226,7 +226,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome Support
             if new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                    "A Iscariot just joined! members, beware!",
+                    "A Devil just joined! members, beware!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -234,7 +234,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome WOLVES
             if new_mem.id in WOLVES:
                 update.effective_message.reply_text(
-                    "A Butler joined! Everyone stay alerted!", reply_to_message_id=reply
+                    "A Vampire joined! Everyone stay alerted!", reply_to_message_id=reply
                 )
                 continue
 
@@ -368,7 +368,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
                     f"[{escape_markdown(new_mem.first_name)}](tg://user?id={user.id})"
                 )
                 message = msg.reply_text(
-                    f"{new_join_mem}, click the button below to prove you're human, and not a dog.\nYou have 120 seconds.",
+                    f"{new_join_mem}, click the button below to prove you're human. Do it fast or get spanked\nYou have 120 seconds.",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             {
@@ -610,14 +610,14 @@ def left_member(update: Update, context: CallbackContext):  # sourcery no-metric
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Master [Freak](https://t.me/Freaking_tag)!! Please don't leave me.. ;(", reply_to_message_id=reply
+                    "My darling [Hawks](https://t.me/TheSharpEye)!! Please don't leave me.. ;(", reply_to_message_id=reply
                 )
                 return
 
             # Give the devs a special goodbye
             if left_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "See you on the other side of the walls! Knight*",
+                    "See you at my bathroom member of TEAM DxD!*",
                     reply_to_message_id=reply,
                 )
                 return
@@ -725,13 +725,13 @@ def welcome(update: Update, context: CallbackContext):
         if args[0].lower() in ("on", "yes"):
             sql.set_welc_preference(str(chat.id), True)
             update.effective_message.reply_text(
-                "Okay! I'll greet members as you say whenever they join. My Master"
+                "Okay! I'll greet members as you say whenever they join. My Dear"
             )
 
         elif args[0].lower() in ("off", "no"):
             sql.set_welc_preference(str(chat.id), False)
             update.effective_message.reply_text(
-                "Finally!! Got a break from welcoming dogs."
+                "Finally!! Got a break from welcoming."
             )
 
         else:
@@ -906,7 +906,7 @@ def welcomemute(update: Update, context: CallbackContext) -> str:
         if args[0].lower() in ["strong"]:
             sql.set_welcome_mutes(chat.id, "strong")
             msg.reply_text(
-                "Evil Mode On!!! I am gonna mute people when they join, they have to prove they're not a dog.\nThey will have just 120 seconds before they get kicked from here."
+                "Evil Mode On!!! I am gonna mute people when they join, they have to prove they're not a bot.\nThey will have just 120 seconds before they get kicked from here."
             )
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
@@ -1157,7 +1157,7 @@ def user_captcha_button(update: Update, context: CallbackContext):
                 )
 
     else:
-        query.answer(text="You're not allowed to do this dog!")
+        query.answer(text="You're not allowed to do this!")
 
 
 WELC_HELP_TXT = (
@@ -1236,21 +1236,21 @@ def __chat_settings__(chat_id, _):
 
 __help__ = """
 *Admins only:*
-✟ /welcome <on/off>*:* enable/disable welcome messages.
-✟ /welcome*:* shows current welcome settings.
-✟ /welcome noformat*:* shows current welcome settings, without the formatting - useful to recycle your welcome messages!
-✟ /goodbye*:* same usage and args as `/welcome`.
-✟ /setwelcome <sometext>*:* set a custom welcome message. If used replying to media, uses that media.
-✟ /setgoodbye <sometext>*:* set a custom goodbye message. If used replying to media, uses that media.
-✟ /resetwelcome*:* reset to the default welcome message.
-✟ /resetgoodbye*:* reset to the default goodbye message.
-✟ /cleanwelcome <on/off>*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
-✟ /welcomemutehelp*:* gives information about welcome mutes.
-✟ /cleanservice <on/off*:* deletes telegrams welcome/left service messages.
+/welcome <on/off>*:* enable/disable welcome messages.
+/welcome*:* shows current welcome settings.
+/welcome noformat*:* shows current welcome settings, without the formatting - useful to recycle your welcome messages!
+/goodbye*:* same usage and args as `/welcome`.
+/setwelcome <sometext>*:* set a custom welcome message. If used replying to media, uses that media.
+/setgoodbye <sometext>*:* set a custom goodbye message. If used replying to media, uses that media.
+/resetwelcome*:* reset to the default welcome message.
+/resetgoodbye*:* reset to the default goodbye message.
+/cleanwelcome <on/off>*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
+/welcomemutehelp*:* gives information about welcome mutes.
+/cleanservice <on/off*:* deletes telegrams welcome/left service messages.
  *Example:*
 user joined chat, user left chat.
 *Welcome markdown:*
-✟ /welcomehelp*:* view more formatting information for custom welcome/goodbye messages that I have.
+/welcomehelp*:* view more formatting information for custom welcome/goodbye messages that I have.
 """
 
 NEW_MEM_HANDLER = MessageHandler(
@@ -1313,7 +1313,7 @@ dispatcher.add_handler(BUTTON_VERIFY_HANDLER)
 dispatcher.add_handler(WELCOME_MUTE_HELP)
 dispatcher.add_handler(CAPTCHA_BUTTON_VERIFY_HANDLER)
 
-__mod_name__ = "✟ Greet ✟"
+__mod_name__ = "Greets"
 __command_list__ = []
 __handlers__ = [
     NEW_MEM_HANDLER,
