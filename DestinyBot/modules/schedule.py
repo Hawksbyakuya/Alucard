@@ -122,10 +122,10 @@ def callbackk(_,query):
 
         
 
-__mod_name__ = "✟ Scheduled ✟"
+__mod_name__ = "Scheduled"
 
 __help__ = """
 
- ✟ /latest: to see latest anime episode
+ /latest: to see latest anime episode
 
 """
