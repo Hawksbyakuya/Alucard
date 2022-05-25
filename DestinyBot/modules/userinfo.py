@@ -295,26 +295,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\n This Hellsing Member is my Master - <b>'Master'</b>."
+        text += "\n\nDisaster of this person is Hades - <b>'My Darling'</b>."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis HellSing Member is a 'Knight', a Organisation member."
+        text += "\n\nThis person is a member of TEAM DxD."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis HellSing Member is a 'Protestine', from the Organisation."
+        text += "\n\nDisaster of this person is Dragon."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis HellSing Member is a 'Iscariot', from the Organisation."
+        text += "\n\nDisaster of this person is Devil."
         disaster_level_present = True 
     elif user.id in TIGERS:
-        text += "\n\nThis HellSing Member is a 'Catholic', from the Organisation."
+        text += "\n\nDisaster of this person is Angel."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThis HellSing Memeber is a 'Butler', from the Organisation."
+        text += "\n\nDisaster of this person is Vampire."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/RiasGremorySupportGroup/22"> ✟ </a>]'.format(
+        text += ' [<a href="https://t.me/RiasGremorySupportGroup/22"> ❤️ </a>]'.format(
             bot.username,
         )
 
